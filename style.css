@@ -725,13 +725,44 @@ font-size:14px; /* размер текста*/
 }
 
 @media (max-width: 800px) {
-  body {
-    animation: none;
-  }
-
   body:after, body:before {
-    animation: none;
-    display: none;
+    content: "";
+    display: block;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    width: 100vmax;
+    height: 100vmax;
+    background: rgba(0, 0, 0, 0.05);
+    -webkit-animation: background 90s linear infinite;
+            animation: background 90s linear infinite;
+  }
+  body:after {
+    left: 15vw;
+  }
+  body:before {
+    right: 15vw;
+    -webkit-animation-delay: -30s;
+            animation-delay: -30s;
+    animation-direction: reverse;
+  }
+  @-webkit-keyframes background {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes background {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
   .center-zag {
     width: 320px;
