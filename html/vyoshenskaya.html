@@ -93,6 +93,44 @@
                 </p>
             </div> 
         </section>
+        <div class="test">
+            <center><b>Пройдите тест на знание станицы.</b></center><br/><br/>
+   &nbsp;&nbsp;&nbsp;
+    <br/>
+   <form name="test"><ol>
+   <li><b> В скольких километрах от Ростова-на-Дону находится станица Вёшенская</b><br/>
+   <input type="radio" value="0" name="Q1"/> 357 километров<br />
+   <input type="radio" value="1" name="Q1"/> 248 километров<br />
+   <input type="radio" value="2" name="Q1"/> 67 километров<br />
+   <input type="radio" value="3" name="Q1"/> 578 километров<br />
+   <br/></li><li><b> Когда станица празднует свой День рождения? </b><br/>
+   <input type="radio" value="0" name="Q2"/> В конце сентября<br />
+   <input type="radio" value="1" name="Q2"/> В начале декабря<br />
+   <input type="radio" value="2" name="Q2"/> В конце августа<br />
+   <input type="radio" value="3" name="Q2"/> В середине июля<br />
+   <br/></li><li><b> В каком году относится первое упоминание о станице?</b><br/>
+   <input type="radio" value="0" name="Q3"/> В 1457<br />
+   <input type="radio" value="1" name="Q3"/> В 1279<br />
+   <input type="radio" value="2" name="Q3"/> В 1975<br />
+   <input type="radio" value="3" name="Q3"/> В 1672<br />
+   <br/></li><li><b> Кто является главным представителем станицы Вёшенской</b><br/>
+   <input type="radio" value="0" name="Q4"/> Шолохов<br />
+   <input type="radio" value="1" name="Q4"/> Гагарин<br />
+   <input type="radio" value="2" name="Q4"/> Добронравов<br />
+   <input type="radio" value="3" name="Q4"/> Деревянко<br />
+   <br/></li><li><b> Где сначала был установлен памятник «Григорий и Аксинья»? </b><br/>
+   <input type="radio" value="0" name="Q5"/> В Ростове-на-Дону<br />
+   <input type="radio" value="1" name="Q5"/> В Таганроге<br />
+   <input type="radio" value="2" name="Q5"/> В Батайске<br />
+   <input type="radio" value="3" name="Q5"/> В Шахтах<br />
+   <br/></li></ol>      
+   <CENTER>
+    <P><TEXTAREA name="s1" rows="3" cols="40" readonly> </TEXTAREA> </P>
+    <button onclick="check_me()" type="button"><a></a></button>&nbsp;&nbsp;&nbsp;&nbsp; 
+    <button class="reset" type="reset"><a></a></button>
+   </CENTER>        
+   </form> 
+        </div>
     </main>
     <footer class="justify-content-between align-items-center ms-3 py-4 border-top text-center">
         <div class="text-center">
@@ -101,4 +139,74 @@
       </footer>
 </body>
 <script src="../main.js"></script>
+<script type="text/javascript" language="JavaScript">// <![CDATA[
+    var res="12411"; 
+   function check_me()
+   {
+       var count=0;
+       with(document.test) {
+   if (!Q1[0].checked&&!Q1[1].checked&&!Q1[2].checked&&!Q1[3].checked)  
+   {count+=1};  
+   if (!Q2[0].checked&&!Q2[1].checked&&!Q2[2].checked&&!Q2[3].checked)  
+   {count+=1};  
+   if (!Q3[0].checked&&!Q3[1].checked&&!Q3[2].checked&&!Q3[3].checked)  
+   {count+=1};  
+   if (!Q4[0].checked&&!Q4[1].checked&&!Q4[2].checked&&!Q4[3].checked)  
+   {count+=1};  
+   if (!Q5[0].checked&&!Q5[1].checked&&!Q5[2].checked&&!Q5[3].checked)  
+   {count+=1};  
+   if (count>0) alert("Вы выполнили не все задания. Проверьте себя!")    
+           else answer();
+       }
+   } 
+    
+   function control(k, f1,f2,f3,f4,f5) {
+   if (k==1&&f1.checked) return true;
+   if (k==2&&f2.checked) return true;
+   if (k==3&&f3.checked) return true;
+   if (k==4&&f4.checked) return true;
+   if (k==5&&f5.checked) return true;
+   return false;
+   }
+   
+   function answer() {
+   answ="";
+        with(document)    {
+       answ+=control(res.charAt(0) ,test.Q1[0],test.Q1[1],test.Q1[2],test.Q1[3])?"1":"0";
+   answ+=control(res.charAt(1) ,test.Q2[0],test.Q2[1],test.Q2[2],test.Q2[3])?"1":"0";
+   answ+=control(res.charAt(2) ,test.Q3[0],test.Q3[1],test.Q3[2],test.Q3[3])?"1":"0";
+   answ+=control(res.charAt(3) ,test.Q4[0],test.Q4[1],test.Q4[2],test.Q4[3])?"1":"0";
+   answ+=control(res.charAt(4) ,test.Q5[0],test.Q5[1],test.Q5[2],test.Q5[3])?"1":"0";
+   
+   showResult();
+       }
+   }
+    
+   function showResult()   {
+       var nok=0;
+       var i,s;
+    
+   for (i=0; i<answ.length;i++) {nok+=answ.charAt(i)=="1"?1:0;}
+   if(nok==5) s="ОТЛИЧНО";
+   if(nok<5) s="ХОРОШО";
+   if(nok<3.75) s="УДОВЛЕТВОРИТЕЛЬНО";
+   if (nok<2.5) s="НЕУДОВЛЕТВОРИТЕЛЬНО";
+       document.test.s1.
+       value="Количество правильных ответов "+nok+". Ваша оценка "+s+". Посмотрите на окно рядом с номером вопроса. Если ответ правильный, там (+). Если ответ ошибочен, там (-).";
+    
+   with(document.test)
+       {
+       if (answ.charAt(0)=="1") {T1.value=" + "} else {T1.value=" - "};
+      if (answ.charAt(1)=="1") {T2.value=" + "} else {T2.value=" - "};
+      if (answ.charAt(2)=="1") {T3.value=" + "} else {T3.value=" - "};
+      if (answ.charAt(3)=="1") {T4.value=" + "} else {T4.value=" - "};
+      if (answ.charAt(4)=="1") {T5.value=" + "} else {T5.value=" - "};
+        }
+   }
+   function showhide(obj){
+       if(obj == 'none') return 'inline';
+       else return 'none';
+   }
+   // ]]>
+   </script>
 </html>

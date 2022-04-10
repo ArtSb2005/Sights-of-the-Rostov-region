@@ -139,7 +139,7 @@
                     <div class="fin fin-bottom"></div>
                 </div>
         </section>
-        <section class="six-info">
+        <section class="six-info-rnd">
             <div class="top">
                 <h1 class="zag-ist">Достопримечательности города<h1>
             </div>
@@ -252,11 +252,121 @@
 
         </section>
     </main>
+    <div class="test">
+        <center><b>Пройдите тест на знание столицы Юга.</b></center><br/><br/>
+&nbsp;&nbsp;&nbsp;
+ <br/>
+<div id="instruction" style="display: none; width: 100%;">
+<ul>
+<li>Выберите один из вариантов в каждом из 4 вопросов;</li>
+<li>Нажмите на кнопку "Показать результат";</li>
+<li>Скрипт не покажет результат, пока Вы не ответите на все вопросы;</li>
+<li>Загляните в окно рядом с номером задания. Если ответ правильный, то там (+). Если Вы ошиблись, там (-).</li>
+<li>За каждый правильный ответ начисляется 1 балл;</li>
+<li>Оценки: менее 2 баллов - НЕУДОВЛЕТВОРИТЕЛЬНО, от 2 но менее 3 - УДОВЛЕТВОРИТЕЛЬНО, 3 и менее 4 - ХОРОШО, 4 - ОТЛИЧНО;</li>
+<li>Чтобы сбросить результат тестирования, нажать кнопку "Сбросить ответы";</li>
+</ul>
+</div>
+<form name="test"><ol>
+<li><b> Какова протяженность набережной Дона?</b><br/>
+<input type="radio" value="0" name="Q1"/> около 3 км<br />
+<input type="radio" value="1" name="Q1"/> около 2 км<br />
+<input type="radio" value="2" name="Q1"/> около 4 км<br />
+<input type="radio" value="3" name="Q1"/> около 1 км<br />
+<br/></li><li><b> В каком года был основан Ростов-на-Дону? </b><br/>
+<input type="radio" value="0" name="Q2"/> 2012<br />
+<input type="radio" value="1" name="Q2"/> 1652<br />
+<input type="radio" value="2" name="Q2"/> 1749<br />
+<input type="radio" value="3" name="Q2"/> 1900<br />
+<br/></li><li><b> Когда Ростов-на-Дону празднует свой день?</b><br/>
+<input type="radio" value="0" name="Q3"/> первая половина сентября<br />
+<input type="radio" value="1" name="Q3"/> вторая половина сентября<br />
+<input type="radio" value="2" name="Q3"/> первая половина октября<br />
+<input type="radio" value="3" name="Q3"/> вторая половина сентября<br />
+<br/></li><li><b> Какой продукт является основным для приготовления традиционных блюд города? </b><br/>
+<input type="radio" value="0" name="Q4"/> Рыба<br />
+<input type="radio" value="1" name="Q4"/> Мясо<br />
+<input type="radio" value="2" name="Q4"/> Яйца<br />
+<input type="radio" value="3" name="Q4"/> Свекла<br />
+<br/></li></ol>      
+<CENTER>
+<P><TEXTAREA name="s1" rows="3" cols="40" readonly> </TEXTAREA> </P>
+<button onclick="check_me()" type="button"><a></a></button>&nbsp;&nbsp;&nbsp;&nbsp; 
+<button class="reset" type="reset"><a></a></button>
+</CENTER>        
+</form> 
+    </div>
+    </main>
     <footer class="justify-content-between align-items-center ms-3 py-4 border-top text-center">
         <div class="text-center">
           <span class="text-muted">© 2022 Гимназия 45</span>
         </div>
       </footer>
 </body>
-<script src="../main.js"></script>
+<script src="main.js"></script>
+<script type="text/javascript" language="JavaScript">// <![CDATA[
+ var res="1311"; 
+function check_me()
+{
+    var count=0;
+    with(document.test) {
+if (!Q1[0].checked&&!Q1[1].checked&&!Q1[2].checked&&!Q1[3].checked)  
+{count+=1};  
+if (!Q2[0].checked&&!Q2[1].checked&&!Q2[2].checked&&!Q2[3].checked)  
+{count+=1};  
+if (!Q3[0].checked&&!Q3[1].checked&&!Q3[2].checked&&!Q3[3].checked)  
+{count+=1};  
+if (!Q4[0].checked&&!Q4[1].checked&&!Q4[2].checked&&!Q4[3].checked)  
+{count+=1};  
+if (count>0) alert("Вы выполнили не все задания. Проверьте себя!")    
+        else answer();
+    }
+} 
+ 
+function control(k, f1,f2,f3,f4) {
+if (k==1&&f1.checked) return true;
+if (k==2&&f2.checked) return true;
+if (k==3&&f3.checked) return true;
+if (k==4&&f4.checked) return true;
+return false;
+}
+
+function answer() {
+answ="";
+     with(document)    {
+    answ+=control(res.charAt(0) ,test.Q1[0],test.Q1[1],test.Q1[2],test.Q1[3])?"1":"0";
+answ+=control(res.charAt(1) ,test.Q2[0],test.Q2[1],test.Q2[2],test.Q2[3])?"1":"0";
+answ+=control(res.charAt(2) ,test.Q3[0],test.Q3[1],test.Q3[2],test.Q3[3])?"1":"0";
+answ+=control(res.charAt(3) ,test.Q4[0],test.Q4[1],test.Q4[2],test.Q4[3])?"1":"0";
+
+showResult();
+    }
+}
+ 
+function showResult()   {
+    var nok=0;
+    var i,s;
+ 
+for (i=0; i<answ.length;i++) {nok+=answ.charAt(i)=="1"?1:0;}
+if(nok==4) s="ОТЛИЧНО";
+if(nok<4) s="ХОРОШО";
+if(nok<3) s="УДОВЛЕТВОРИТЕЛЬНО";
+if (nok<2) s="НЕУДОВЛЕТВОРИТЕЛЬНО";
+    document.test.s1.
+    value="Количество правильных ответов "+nok+". Ваша оценка "+s+".";
+ 
+with(document.test)
+    {
+    if (answ.charAt(0)=="1") {T1.value=" + "} else {T1.value=" - "};
+   if (answ.charAt(1)=="1") {T2.value=" + "} else {T2.value=" - "};
+   if (answ.charAt(2)=="1") {T3.value=" + "} else {T3.value=" - "};
+   if (answ.charAt(3)=="1") {T4.value=" + "} else {T4.value=" - "};
+     }
+}
+function showhide(obj){
+    if(obj == 'none') return 'inline';
+    else return 'none';
+}
+// ]]>
+</script>
 </html>
