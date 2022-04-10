@@ -1,0 +1,1129 @@
+.top {
+    text-align: center;
+    margin-top: 0px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center-zag {
+    margin-top: 300px;
+}
+
+
+.one {
+    height: 80vh;
+}
+
+.two {
+    height: 2600px;
+}
+
+  
+button.scroll_down {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 470;
+    height: 50px;
+    width: 30px;
+    bottom: 60px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+button.scroll_down:before {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    content: '';
+    width: 6px;
+    height: 6px;
+    margin-left: -3px;
+    background-color: #000;
+    border-radius: 100%;
+    -webkit-animation: scroll_down_btn-animation 2s infinite;
+    animation: scroll_down_btn-animation 2s infinite;
+    box-sizing: border-box;
+  }
+  
+@keyframes scroll_down_btn-animation {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      transform: translate(0, 20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+@-webkit-keyframes scroll_down_btn-animation {
+    0% {
+      -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+      opacity: 0;
+    }
+    40% {
+      opacity: 1;
+    }
+    80% {
+      -webkit-transform: translate(0, 20px);
+      transform: translate(0, 20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+.two-zag {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.one_about {
+    width: 700px;
+    margin-top: 150px;
+    margin-left: 100px;
+}
+
+.two_about {
+    width: 700px;
+    margin-top: 100px;
+    margin-left: 50px;
+    text-align: right;
+    position: absolute;
+    right:100px
+}
+
+.three_about {
+    width: 700px;
+    margin-top: 450px;
+    margin-left: 100px;
+}
+
+.four_about {
+    width: 700px;
+    margin-top: 100px;
+    margin-left: 50px;
+    text-align: right;
+    position: absolute;
+    right:100px
+}
+
+.five_about {
+    width: 700px;
+    margin-top: 420px;
+    margin-left: 100px;
+}
+
+.six_about {
+    width: 700px;
+    margin-top: 100px;
+    margin-left: 50px;
+    text-align: right;
+    position: absolute;
+    right:100px
+}
+
+.seven_about {
+    width: 700px;
+    margin-top: 420px;
+    margin-left: 100px;
+}
+
+body {
+    -webkit-animation: theme 21s linear infinite;
+            animation: theme 21s linear infinite;
+}
+  body:after, body:before {
+    content: "";
+    display: block;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    width: 100vmax;
+    height: 100vmax;
+    background: rgba(0, 0, 0, 0.05);
+    -webkit-animation: background 90s linear infinite;
+            animation: background 90s linear infinite;
+  }
+  body:after {
+    left: 15vw;
+  }
+  body:before {
+    right: 15vw;
+    -webkit-animation-delay: -30s;
+            animation-delay: -30s;
+    animation-direction: reverse;
+  }
+  @-webkit-keyframes background {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes background {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .three {
+      height: 950px;
+  }
+
+  .bg {
+    transition: all 0.8s;
+  }
+
+  .bg:hover {
+    transform: scale(1.2); /* Увеличиваем масштаб */
+   }
+
+  .novocheck {
+    margin-left: 200px;
+    background-image: url(images/novocheck.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 300px;
+    height: 190px;
+    transition: all 0.8s;
+  }
+  
+  .blackout {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgba(0,0,0,0.75);
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .blackout h4 {
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    margin-top: -10px;
+  }
+  .blackout h6 {
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    margin-top: 60px;
+    position: absolute;
+  }
+
+  .novocheck:hover .blackout {
+    opacity: 1;
+  }
+  .novocheck:hover .blackout h4 {
+    margin-top: 0;
+  }
+
+  .azov {
+      margin-top: 100px;
+    margin-left: 570px;
+    background-image: url(images/azov.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 300px;
+    height: 190px;
+  }
+
+  .azov:hover .blackout {
+    opacity: 1;
+  }
+  .azov:hover .blackout h4 {
+    margin-top: 0;
+  }
+  
+  .rnd {
+    margin-top: -480px;
+  margin-left: 600px;
+  background-image: url(images/rnd.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 300px;
+  height: 190px;
+}
+
+.rnd:hover .blackout {
+  opacity: 1;
+}
+.rnd:hover .blackout h4 {
+  margin-top: 0;
+}
+
+.bataysk {
+    margin-top: 80px;
+  margin-right: 170px;
+  margin-left: auto;
+  background-image: url(images/bataysk.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 300px;
+  height: 190px;
+}
+
+.bataysk:hover .blackout {
+  opacity: 1;
+}
+.bataysk:hover .blackout h4 {
+  margin-top: 0;
+}
+
+.shakhty {
+    margin-top: 80px;
+  margin-right: 300px;
+  margin-left: auto;
+  background-image: url(images/shakhty.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 300px;
+  height: 190px;
+}
+
+.shakhty:hover .blackout {
+  opacity: 1;
+}
+.shakhty:hover .blackout h4 {
+  margin-top: 0;
+}
+
+.taganrog {
+    margin-top: -770px;
+  margin-right: 200px;
+  margin-left: auto;
+  background-image: url(images/taganrog.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 300px;
+  height: 190px;
+}
+
+.taganrog:hover .blackout {
+  opacity: 1;
+}
+.taganrog:hover .blackout h4 {
+  margin-top: 0;
+}
+
+.starochek {
+    margin-top: 430px;
+  margin-left: 470px;
+  background-image: url(images/stanitsa_starocherkasskaya.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 300px;
+  height: 190px;
+}
+
+.starochek:hover .blackout {
+  opacity: 1;
+}
+.starochek:hover .blackout h4 {
+  margin-top: 0;
+}
+
+.vyoshensk {
+    margin-top: -460px;
+  margin-left: 100px;
+  background-image: url(images/stanitsa_vyoshenskaya.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  width: 300px;
+  height: 190px;
+}
+
+.vyoshensk:hover .blackout {
+  opacity: 1;
+}
+.vyoshensk:hover .blackout h4 {
+  margin-top: 0;
+}
+
+.center-gorod {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.desc-zag {
+  width: 700px;
+  position: absolute;
+  margin-top: 100px;
+  right: 80px;
+  text-align: justify;
+}
+
+.logo {
+  position: absolute;
+  width: 42%;
+  margin-top: 105px;
+  left: 80px;
+}
+
+.zag-ist {
+  margin-top: 100px;
+}
+
+.desc {
+  width: 1000px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.three-info {
+  height: 2000px;
+}
+
+
+.contmeleft {
+  margin-top: 150px;
+  width: 1000px; /* общая ширина блока*/
+  overflow: hidden; /* скрывает возможность появления прокрутки блока. */
+  margin-right: auto;
+  margin-left: auto;
+  line-height: normal;
+}
+  
+  .contmeleft img { /* ысота картинки, от неё будет зависеть и размер общего блока */
+  object-fit: cover; /* обрезаем края картинки, если они не вместятся в блок */
+  object-position: 0 70; /* тоже обрезка краев */
+  margin-right: 10px;
+  float: left;
+  }
+  
+  
+  .contmeleft p{
+    margin-top: 0px;
+  overflow-wrap: normal; /* показывает тексту, что он не должен заходить за границы блока */
+  padding: 10px; /* отступ от рамки до текста - делает его красивее */
+  margin-left: 15px; /* отступ с левой стороны от блока с картинкой */
+  display: block; /* обознначает, что это не просто бесформенный текст, а блок внутри блока */
+  font-size:14px; /* размер текста*/
+  }
+
+.right {
+  float: right;
+}
+
+.three-info-vyoshensk {
+  height: 1200px;
+}
+
+.main-content {
+  width: 1200px;
+  font-size:16px;
+  margin-top: 150px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.four-info {
+  height: 1300px;
+}
+
+.four-info-veshensk {
+  height: 1300px;
+}
+
+.five-info {
+  height: 800px;
+}
+
+.vesh_list {
+  width: 1200px;
+}
+
+.fish {
+  width: 150px;
+  height: 100px;
+  animation: swim 3s infinite; 
+}
+
+/* Franklin */
+.fish-body {
+  position: relative;
+  margin-top: 30px;
+  margin-left: 40px;
+  background-color: orange;
+  border-radius: 50%;
+  width: 150px; 
+  height: 100px;
+}
+
+.eye {
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 20px;
+  z-index: 1;
+  background-color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+.pupil {
+  position: absolute;
+  z-index: 2;
+  margin-left: 5px;
+  margin-top: 5px;
+  background-color: black;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+}
+
+.info-bataysk {
+  height: 900px;
+}
+
+.three-info-bataysk {
+  height: 2000px;
+}
+
+.four-info-bataysk {
+  height: 400px;
+}
+
+.six-info-bataysk {
+  height: 2100px;
+}
+
+.fin {
+  margin-top: -100px; 
+  background-color: orange;
+  border-radius: 50%;
+  transform: rotate(40deg);
+  width: 80px;
+  height: 50px;
+}
+
+.three-info-azov {
+  height: 2600px;
+}
+
+.four-info-azov {
+  height: 1100px;
+}
+
+.six-info-azov {
+  height: 1500px;
+}
+
+.fin-bottom {
+  margin-top: -10px;
+  transform: rotate(-40deg);
+}
+
+@keyframes swim {
+  0% {
+    transform: translateY(-50px) translateX(0) rotate(30deg);
+  }
+  25% { 
+    transform: translateY(50px) translateX(400px) rotate(20deg);
+  }
+  50% {
+    transform: translateY(100px) translateX(650px);
+  }
+  75% {
+    transform: translateY(80px) translateX(1000px) rotate(-20deg);
+  }
+  100% {
+    transform: translateY(-50px) translateX(1550px) rotate(-30deg);
+  }
+}
+
+/* Bubbles Animation */
+@keyframes up {
+  100% {
+    transform: translateY(-800px);
+  }
+}
+
+.six-info {
+  height: 4200px;
+}
+
+.nabereg {
+  margin-top: 80px;
+margin-right: 170px;
+margin-left: auto;
+background-image: url(images/bataysk.jpg);
+background-size: cover;
+background-position: center;
+position: relative;
+width: 300px;
+height: 190px;
+}
+
+.dost {
+  width: 1100px;
+}
+
+.one-info {
+  height: 100vh;
+}
+
+.three-info-starochek {
+  height: 2000px;
+}
+
+.four-info-starochek {
+  height: 1000px;
+}
+
+.info {
+  height: 500px;
+}
+
+.four-info-small {
+  height: 300px;
+}
+
+.three-info-novochek {
+  height: 1900px;
+}
+
+.novocheck-list {
+  width: 700px;
+}
+
+.four-info-shakhty {
+  height: 400px;
+}
+
+.novocheck-list p{
+  margin-top: 0px;
+overflow-wrap: normal; /* показывает тексту, что он не должен заходить за границы блока */
+padding: 0px; /* отступ от рамки до текста - делает его красивее */
+margin-left: 15px; /* отступ с левой стороны от блока с картинкой */
+display: block; /* обознначает, что это не просто бесформенный текст, а блок внутри блока */
+font-size:14px; /* размер текста*/
+}
+
+.novocheck-list h5{
+  margin-bottom: -10px;
+}
+
+.six-info-small {
+  height: 1500px;
+}
+
+.info-small {
+  height: 400px;
+}
+
+.main-content-small {
+  width: 800px;
+  font-size:16px;
+  margin-top: 150px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.main-content-small h5 {
+  margin-bottom: -20px;
+}
+
+.contmeleft-small {
+  margin-top: 150px;
+  width:800px; /* общая ширина блока*/
+  margin-right: auto;
+  margin-left: auto;
+  line-height: normal;
+  overflow: hidden;
+}
+  
+  .contmeleft-small img { /* ысота картинки, от неё будет зависеть и размер общего блока */
+  object-fit: cover; /* обрезаем края картинки, если они не вместятся в блок */
+  object-position: 0 70; /* тоже обрезка краев */
+  margin-right: 10px;
+  float: left;
+  }
+  
+  
+  .contmeleft-small p{
+    margin-top: -20px;
+  overflow-wrap: normal; /* показывает тексту, что он не должен заходить за границы блока */
+  padding: 10px; /* отступ от рамки до текста - делает его красивее */
+  margin-left: 15px; /* отступ с левой стороны от блока с картинкой */
+  display: block; /* обознначает, что это не просто бесформенный текст, а блок внутри блока */
+  font-size:14px; /* размер текста*/
+  }
+  .contmeleft-small h5{
+    margin-bottom: -20px;
+  }
+
+.three-info-tag {
+  height: 3200px;
+}
+
+.big {
+  width: 1400px;
+}
+
+.three-info-tag {
+  height: 2700px;
+}
+
+.taganrog-sect-six {
+  height: 3000px;
+}
+
+.six-info-shakhty {
+  height: 1000px;
+}
+
+.three-info-shakhty {
+  height: 2000px;
+}
+
+@media (max-width: 800px) {
+  body {
+    animation: none;
+  }
+
+  body:after, body:before {
+    animation: none;
+    display: none;
+  }
+  .center-zag {
+    width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .top {
+    width: auto;
+  }
+
+  .one_about {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    text-align: center;
+    font-size: small;
+  }
+
+  .one_about h5 {
+    font-size: 15px;
+  }
+
+  .two_about {
+    right: 0;
+    left: 0;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    text-align: center;
+  }
+
+  .two_about h5 {
+    font-size: 15px;
+  }
+
+  .three_about {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    text-align: center;
+    font-size: small;
+  }
+
+  .three_about h5 {
+    font-size: 15px;
+  }
+
+  .four_about {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    right: 0;
+    left: 0;
+    width: auto;
+  }
+
+  .four_about h5 {
+    font-size: 15px;
+  }
+
+  .five_about {
+    margin-left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    text-align: center;
+    font-size: small;
+  }
+
+  .five_about h5 {
+    font-size: 15px;
+  }
+
+  .six_about {
+    margin-left: 0px;
+    right: 0;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    text-align: center;
+  }
+
+  .six_about h5 {
+    font-size: 15px;
+  }
+
+  .seven_about {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    text-align: center;
+    font-size: small;
+  }
+
+  .seven_about h5 {
+    font-size: 15px;
+  }
+
+  .three {
+    height: 2050px;
+  }
+
+  .bg {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+  }
+
+  .info-small {
+    height: 600px;
+  }
+
+  .desc {
+    width: auto;
+  }
+
+  .three-info {
+    height: 4300px;
+  }
+
+  .contmeleft-small {
+    width: 305px;
+    text-align: justify;
+  }
+
+  .contmeleft-small img {
+    width: 100%;
+  }
+
+  .contmeleft-small h5 {
+    width: 400px;
+    font-size: 20px;
+  }
+
+  .contmeleft {
+    width: 300px;
+    text-align: justify;
+    font-size: 20px;
+  }
+
+  .contmeleft h5 {
+    font-size: 18px;
+  }
+
+  .contmeleft img {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+  }
+
+  .main-content-small {
+    width: 300px;
+  }
+
+  .main-content-small {
+    text-align: justify;
+  }
+
+  .main-content-small img {
+    width: 100%;
+  }
+
+  .four-info-small {
+    height: 600px;
+  }
+
+  .six-info-small {
+    height: 2500px;
+  }
+
+  .novocheck-list {
+    width: 300px;
+    text-align: justify;
+  }
+
+  .novocheck-list h5 {
+    width: 300px;
+    text-align: left;
+  }
+
+  .novocheck-list p {
+    margin-left: 0px;
+  }
+
+  .main-content img {
+    width: 100%;
+  }
+
+  .contmeleft {
+    width: 300px;
+  }
+
+  .contmeleft img {
+    width: 100%;
+  }
+
+  .info{
+    height: 900px;
+  }
+
+  .three-info-tag {
+    height: 5200px;
+  }
+
+  .one_about {
+    margin-top: 75px;
+  }
+
+  .desc{
+    font-size: 15px;
+  }
+
+  .fish {
+    width: 75px;
+    height: 50px;
+    animation: swim 3s infinite; 
+  }
+  
+  /* Franklin */
+  .fish-body {
+    position: relative;
+    margin-top: 30px;
+    margin-left: 40px;
+    background-color: orange;
+    border-radius: 50%;
+    width: 75px; 
+    height: 50px;
+  }
+  
+  .eye {
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 15px;
+    z-index: 1;
+    background-color: white;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+  }
+  
+  .pupil {
+    position: absolute;
+    z-index: 2;
+    margin-left: 2.5px;
+    margin-top: 2.5px;
+    background-color: black;
+    border-radius: 50%;
+    height: 5px;
+    width: 5px;
+  }
+  
+  .fin {
+    margin-top: -50px; 
+    margin-left: 10px;
+    background-color: orange;
+    border-radius: 50%;
+    transform: rotate(40deg);
+    width: 40px;
+    height:25px;
+  }
+  
+  .fin-bottom {
+    margin-top: -10px;
+    transform: rotate(-40deg);
+  }
+  
+  @keyframes swim {
+    0% {
+      transform: translateY(-25px) translateX(0) rotate(30deg);
+    }
+    25% { 
+      transform: translateY(0px) translateX(25px) rotate(20deg);
+    }
+    50% {
+      transform: translateY(50px) translateX(100px);
+    }
+    75% {
+      transform: translateY(50px) translateX(250px) rotate(-20deg);
+    }
+    100% {
+      transform: translateY(-50px) translateX(500px) rotate(-40deg);
+    }
+  }
+  
+  /* Bubbles Animation */
+  @keyframes up {
+    100% {
+      transform: translateY(-800px);
+    }
+  }
+  
+  .dost {
+    width: 300px;
+  }
+
+  .six-info {
+    height: 9400px;
+  }
+
+  .rnd-info {
+    height: 1400px;
+  }
+
+  .main-content {
+    width: 300px;
+  }
+
+  .three-info {
+    height: 5000px;
+  }
+
+  .four-info-taganrog {
+    height: 500px;
+  }
+
+  .three-info-tag {
+    height: 5300px;
+  }
+
+  .taganrog-sect-six {
+    height: 6800px;
+  }
+
+  .three-info-vyoshensk {
+    height: 2200px;
+  }
+
+  .four-info-veshensk {
+    height: 3200px;
+  }
+
+  .three-info-azov {
+    height: 5200px;
+  }
+
+  .three_about-azov {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    margin-top: 550px;
+    text-align: center;
+  }
+  .one_about-azov {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    text-align: center;
+  }
+  .six-info-azov {
+    height: 2500px;
+  }
+
+  .three-info-bataysk {
+    height: 4100px;
+  }
+
+  .info-bataysk {
+    height: 1100px;
+  }
+
+  .six-info-bataysk {
+    height: 3700px;
+  }
+
+  .three-info-novochek {
+    height: 4200px;
+  }
+
+  .three-info-starochek {
+    height: 4200px;
+  }
+
+  .four-info-starochek {
+    height: 2500px;
+  }
+
+  .six-info-small {
+    height: 2500px;
+  }
+
+  .three-info-shakhty {
+    height: 4300px;
+  }
+
+  .four-info-shakhty {
+    height: 300px;
+  }
+
+  .six-info-shakhty {
+    height: 2000px;
+  }
+}
