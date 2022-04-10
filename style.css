@@ -668,6 +668,7 @@ font-size:14px; /* размер текста*/
 
 .main-content-small h5 {
   margin-bottom: -20px;
+  text-align: left;
 }
 
 .contmeleft-small {
@@ -739,6 +740,14 @@ font-size:14px; /* размер текста*/
   }
   .top {
     width: auto;
+  }
+
+  .four-info-small-nov {
+    height: 300px;
+  }
+  
+  .small h5 {
+    text-align: justify;
   }
 
   .one_about {
@@ -864,8 +873,8 @@ font-size:14px; /* размер текста*/
   }
 
   .contmeleft-small h5 {
-    width: 400px;
     font-size: 20px;
+    text-align: left;
   }
 
   .contmeleft {
@@ -876,6 +885,7 @@ font-size:14px; /* размер текста*/
 
   .contmeleft h5 {
     font-size: 18px;
+    text-align: left;
   }
 
   .contmeleft img {
@@ -1003,10 +1013,10 @@ font-size:14px; /* размер текста*/
   
   @keyframes swim {
     0% {
-      transform: translateY(-25px) translateX(0) rotate(30deg);
+      transform: translateY(-25px) translateX(-50px) rotate(30deg);
     }
     25% { 
-      transform: translateY(0px) translateX(25px) rotate(20deg);
+      transform: translateY(25px) translateX(25px) rotate(20deg);
     }
     50% {
       transform: translateY(50px) translateX(100px);
@@ -1126,4 +1136,13 @@ font-size:14px; /* размер текста*/
   .six-info-shakhty {
     height: 2000px;
   }
+
+  .three_about-azov {
+    margin-top: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    text-align: center;
+    font-size: small;
+}
 }
